@@ -36,10 +36,11 @@ function numRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Ciclo l'array delle squadre per assegnargli punti e falli random
 for (let i = 0; i < squadre.length; i++) {
     squadre[i].punti = numRandom(0, 10);
     squadre[i].falli = numRandom(0, 10);
-
+    // Stampo in pagina il nome della squadra con rispettivi falli subiti
     document.getElementById("risultato").innerHTML += ("I falli subiti da " + squadre[i].nome + " sono: " + squadre[i].falli + "<hr>");
     }
     
