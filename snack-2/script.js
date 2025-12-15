@@ -47,16 +47,24 @@ for (let i = 0; i < squadre.length; i++) {
     // Stampo in pagina il nome della squadra con rispettivi falli subiti
     output += ("I falli subiti da " + squadre[i].nome + " sono: " + squadre[i].falli + "<hr>");
 }
-    
-    resultEl.innerHTML = output;
+resultEl.innerHTML = output;
 
 // Creo array che contiene rispettivamente per ogni squadra nome e falli subiti
 let arrayNomeFalli = [];
 for (let i = 0; i < squadre.length; i++) {
     arrayNomeFalli[i] = {
-    "nome": squadre[i].nome,
-    "falli": squadre[i].falli
-  };
+        "nome": squadre[i].nome,
+        "falli": squadre[i].falli
+    };
+}
+console.log(arrayNomeFalli);
+
+/* Oppure con destructuring
+let arrayNomeFalli = [];
+for (let i = 0; i < squadre.length; i++) {
+    const { nome, falli } = squadre[i];
+    arrayNomeFalli[i] = { nome, falli };
 }
 
 console.log(arrayNomeFalli);
+*/
